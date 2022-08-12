@@ -13,6 +13,7 @@ struct HomeView: View {
     @State private var showPortfolio: Bool = false
     
     
+
     var body: some View {
         ZStack{
             // Background Layer
@@ -91,6 +92,7 @@ extension HomeView{
     }
     
     
+
     private var allCoinsList: some View{
         List{
             ForEach(vm.allCoins){ coin in
