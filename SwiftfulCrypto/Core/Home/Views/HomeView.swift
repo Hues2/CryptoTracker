@@ -39,7 +39,6 @@ struct HomeView: View {
                 columnTitles
                 
                 
-                
                 //MARK: - Lists
                 if !showPortfolio{
                     allCoinsList

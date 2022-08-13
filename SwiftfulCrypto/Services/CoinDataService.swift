@@ -32,7 +32,4 @@ class CoinDataService : ObservableObject{
             }
 
     }
-    
-    
-    
 }
