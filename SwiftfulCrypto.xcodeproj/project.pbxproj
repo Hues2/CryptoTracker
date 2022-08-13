@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E42EC2228A7997000C6BFFF /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42EC2128A7997000C6BFFF /* CoinImageView.swift */; };
+		2E42EC2428A79FCC00C6BFFF /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42EC2328A79FCC00C6BFFF /* CoinImageService.swift */; };
+		2E42EC2628A7A1CC00C6BFFF /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42EC2528A7A1CC00C6BFFF /* CoinImageViewModel.swift */; };
 		2E45D2A528A6F3FA00B65EC6 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E45D2A428A6F3FA00B65EC6 /* CoinDataService.swift */; };
 		2E45D2A828A6FC7A00B65EC6 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E45D2A728A6FC7A00B65EC6 /* NetworkingManager.swift */; };
 		2E741BC928A58E3F006873C1 /* SwiftfulCryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E741BC828A58E3F006873C1 /* SwiftfulCryptoApp.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E42EC2128A7997000C6BFFF /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		2E42EC2328A79FCC00C6BFFF /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
+		2E42EC2528A7A1CC00C6BFFF /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 		2E45D2A428A6F3FA00B65EC6 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		2E45D2A728A6FC7A00B65EC6 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		2E741BC528A58E3F006873C1 /* Crypto Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,10 +60,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E42EC2028A7995F00C6BFFF /* CoinImage */ = {
+			isa = PBXGroup;
+			children = (
+				2E42EC2128A7997000C6BFFF /* CoinImageView.swift */,
+				2E42EC2528A7A1CC00C6BFFF /* CoinImageViewModel.swift */,
+			);
+			path = CoinImage;
+			sourceTree = "<group>";
+		};
 		2E45D2A328A6F3D200B65EC6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				2E45D2A428A6F3FA00B65EC6 /* CoinDataService.swift */,
+				2E42EC2328A79FCC00C6BFFF /* CoinImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -158,6 +174,7 @@
 		2E741BDF28A5945B006873C1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2E42EC2028A7995F00C6BFFF /* CoinImage */,
 				2E741BE028A59475006873C1 /* CircleButton */,
 			);
 			path = Components;
@@ -255,13 +272,16 @@
 				2E741BEF28A5AA34006873C1 /* HomeViewModel.swift in Sources */,
 				2E741BCB28A58E3F006873C1 /* ContentView.swift in Sources */,
 				2E741BDE28A593AF006873C1 /* HomeView.swift in Sources */,
+				2E42EC2228A7997000C6BFFF /* CoinImageView.swift in Sources */,
 				2E741BC928A58E3F006873C1 /* SwiftfulCryptoApp.swift in Sources */,
 				2E741BE228A59485006873C1 /* CircleButtonView.swift in Sources */,
 				2E741BD828A5912E006873C1 /* Color.swift in Sources */,
 				2E45D2A828A6FC7A00B65EC6 /* NetworkingManager.swift in Sources */,
 				2E741BE428A59733006873C1 /* CircleButtonAnimationView.swift in Sources */,
+				2E42EC2628A7A1CC00C6BFFF /* CoinImageViewModel.swift in Sources */,
 				2E741BEB28A5A007006873C1 /* PreviewProvider.swift in Sources */,
 				2E741BED28A5A2A8006873C1 /* Double.swift in Sources */,
+				2E42EC2428A79FCC00C6BFFF /* CoinImageService.swift in Sources */,
 				2E741BE728A59BB4006873C1 /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
