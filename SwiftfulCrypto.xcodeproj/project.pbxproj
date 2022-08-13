@@ -120,9 +120,9 @@
 		2E741BC728A58E3F006873C1 /* SwiftfulCrypto */ = {
 			isa = PBXGroup;
 			children = (
-				2E45D2A628A6FC4A00B65EC6 /* Utilities */,
 				2E741BC828A58E3F006873C1 /* SwiftfulCryptoApp.swift */,
 				2E741BCA28A58E3F006873C1 /* ContentView.swift */,
+				2E45D2A628A6FC4A00B65EC6 /* Utilities */,
 				2E741BD628A5911C006873C1 /* Extensions */,
 				2E45D2A328A6F3D200B65EC6 /* Services */,
 				2E741BE528A59B87006873C1 /* Models */,

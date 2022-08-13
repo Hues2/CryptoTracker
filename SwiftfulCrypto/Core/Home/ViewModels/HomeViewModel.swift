@@ -23,19 +23,37 @@ class HomeViewModel: ObservableObject{
     
     
     private func addSubscribers(){
-        dataService.$allCoins
-            .sink { completion in
-                switch completion{
-                case .finished:
-                    break
-                case .failure(let error):
-                    print("\n \(error.localizedDescription) \n")
-                }
-            } receiveValue: { [weak self] returnedCoins in
+        
+        // Updates allCoins
+        $searchText
+            .combineLatest(dataService.$allCoins)
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+        
+            // This map will use the text from the searchText and the allCoins from the dataService
+            // it automatically places them into the filterCoins function parameters
+            .map(filterCoins)
+            .sink { [weak self] (returnedCoins) in
                 self?.allCoins = returnedCoins
             }
             .store(in: &cancellables)
-
+            
+        
+    }
+    
+    
+    private func filterCoins(text: String, coins: [CoinModel]) -> [CoinModel]{
+        // No text in the searchbar
+        guard !text.isEmpty else{
+            return coins
+        }
+        
+        // Search bar has text
+        let lowercasedText = text.lowercased()
+        
+        return coins.filter { (coin) -> Bool in
+            return coin.name.lowercased().contains(lowercasedText) || coin.symbol.lowercased().contains(lowercasedText)
+            || coin.id.lowercased().contains(lowercasedText)
+        }
     }
     
 }
