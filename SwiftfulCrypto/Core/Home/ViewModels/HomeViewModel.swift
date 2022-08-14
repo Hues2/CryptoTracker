@@ -24,6 +24,9 @@ class HomeViewModel: ObservableObject{
     
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
+    private let portfolioDataService = PortfolioDataService()
+    
+    
     private var cancellables = Set<AnyCancellable>()
     
     init(){
@@ -59,8 +62,43 @@ class HomeViewModel: ObservableObject{
             }
             .store(in: &cancellables)
         
-            
         
+        
+        // Updates portfolioCoins
+        $allCoins
+            .combineLatest(portfolioDataService.$savedEntities)
+            .map({ (coinModels, portfolioEntities) -> [CoinModel] in
+                coinModels.compactMap { (coin) -> CoinModel? in
+                    guard let entity = portfolioEntities.first(where: {$0.coinId == coin.id}) else {return nil}
+                    
+                    return coin.updateHoldings(amount: entity.amount)
+                            
+                }
+            })
+//            .map { [weak self] (coinModels, portfolioEntities) -> [CoinModel] in
+//                var portfolioCoins: [CoinModel] = []
+//
+//                // Loop through all the entities in the portfolio
+//                for portfolioEntity in portfolioEntities{
+//                    // Get the coin from all coins that has the same id as the coinId in the entity and add it to the portfolioCoins
+//                    if let coin = coinModels.first(where: {$0.id == portfolioEntity.coinId}){
+//                        portfolioCoins.append(coin)
+//                    }
+//                }
+//
+//                return portfolioCoins
+//            }
+            .sink { [weak self] returnedPortfolioCoins in
+                self?.portfolioCoins = returnedPortfolioCoins
+            }
+            .store(in: &cancellables)
+            
+    
+    }
+    
+    
+    func updatePortfolio(coin: CoinModel, amount: Double){
+        portfolioDataService.updatePortfolio(coin: coin, amount: amount)
     }
     
     
