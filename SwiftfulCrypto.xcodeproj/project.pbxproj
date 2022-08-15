@@ -38,6 +38,7 @@
 		2EDE304E28A83D6E00E12F50 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE304D28A83D6E00E12F50 /* PortfolioView.swift */; };
 		2EDE305028A83FE900E12F50 /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE304F28A83FE900E12F50 /* XMarkButton.swift */; };
 		2EDE305228A84FB500E12F50 /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE305128A84FB500E12F50 /* CoinLogoView.swift */; };
+		2EFE356D28AAC977007112E5 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFE356C28AAC977007112E5 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		2EDE304D28A83D6E00E12F50 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		2EDE304F28A83FE900E12F50 /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		2EDE305128A84FB500E12F50 /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
+		2EFE356C28AAC977007112E5 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				2E45D2A728A6FC7A00B65EC6 /* NetworkingManager.swift */,
 				2E42EC2728A7BF7900C6BFFF /* LocalFileManager.swift */,
+				2EFE356C28AAC977007112E5 /* HapticManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				2E42EC2D28A7D29E00C6BFFF /* UIApplication.swift in Sources */,
 				2E741BE228A59485006873C1 /* CircleButtonView.swift in Sources */,
 				2E741BD828A5912E006873C1 /* Color.swift in Sources */,
+				2EFE356D28AAC977007112E5 /* HapticManager.swift in Sources */,
 				2E42EC2B28A7CE1700C6BFFF /* SearchBarView.swift in Sources */,
 				2E45D2A828A6FC7A00B65EC6 /* NetworkingManager.swift in Sources */,
 				2EDE305228A84FB500E12F50 /* CoinLogoView.swift in Sources */,
@@ -488,7 +492,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,7 +523,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
